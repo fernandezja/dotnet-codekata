@@ -15,8 +15,9 @@ namespace FileManager.Tests
 
 
             //1) Fecha
+
             //2) Crear directorios para cada parte
-            //Ejemplo: Carpeta 2023/04/11
+            //   Ejemplo: Carpeta 2023/04/11
 
             //3) Escribir un archivo con nombre de la fecha 2023/04/11/2023-04-11.txt
 

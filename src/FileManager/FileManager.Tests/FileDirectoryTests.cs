@@ -65,6 +65,7 @@ namespace FileManager.Tests
             var d = new DirectoryInfo("Starwars");
 
             d.Delete();
+
             //d.CreateSubdirectory("Galaxy")
 
 
