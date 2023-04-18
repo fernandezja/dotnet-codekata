@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33606.364
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcApp1", "CalcApp1.csproj", "{0E9DCEB1-933A-4B6D-B3BE-88BCA92F2318}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcApp1", "CalcApp1\CalcApp1.csproj", "{0E9DCEB1-933A-4B6D-B3BE-88BCA92F2318}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcApp2", "..\CalcApp2\CalcApp2.csproj", "{E7B83C1B-715F-457C-82FF-EB263B3DD17F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcApp2", "CalcApp2\CalcApp2.csproj", "{E7B83C1B-715F-457C-82FF-EB263B3DD17F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcCore", "..\CalcCore\CalcCore.csproj", "{C0360E96-A336-4AE0-9FD4-0FE36860CCC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcCore", "CalcCore\CalcCore.csproj", "{C0360E96-A336-4AE0-9FD4-0FE36860CCC6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{E5028226-F9C9-4481-B071-01650167A9C2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{E299BF15-F510-4EE1-A32D-B2C873B3862B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calc.Core.Interfaces", "..\Calc.Core.Interfaces\Calc.Core.Interfaces.csproj", "{69785CFE-626A-405F-8F2A-807942A1B84B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calc.Core.Interfaces", "Calc.Core.Interfaces\Calc.Core.Interfaces.csproj", "{69785CFE-626A-405F-8F2A-807942A1B84B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcSuperpower", "..\CalcSuperpower\CalcSuperpower.csproj", "{6C4D9558-17CF-46B8-9985-01F068333132}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcSuperpower", "CalcSuperpower\CalcSuperpower.csproj", "{6C4D9558-17CF-46B8-9985-01F068333132}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcWinform1", "..\CalcWinform1\CalcWinform1.csproj", "{579C472D-783B-4696-9C6B-F4AC6EED6D5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcWinform1", "CalcWinform1\CalcWinform1.csproj", "{579C472D-783B-4696-9C6B-F4AC6EED6D5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
