@@ -31,13 +31,16 @@
             button1 = new Button();
             label1 = new Label();
             lblEstado = new Label();
+            btnGenerate = new Button();
+            panelCalc = new Panel();
+            btnRemover = new Button();
             SuspendLayout();
             // 
             // button1
             // 
             button1.Location = new Point(33, 26);
             button1.Name = "button1";
-            button1.Size = new Size(278, 32);
+            button1.Size = new Size(169, 32);
             button1.TabIndex = 0;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
@@ -64,11 +67,43 @@
             lblEstado.TabIndex = 2;
             lblEstado.Text = "label2";
             // 
+            // btnGenerate
+            // 
+            btnGenerate.Location = new Point(317, 26);
+            btnGenerate.Name = "btnGenerate";
+            btnGenerate.Size = new Size(278, 32);
+            btnGenerate.TabIndex = 4;
+            btnGenerate.Text = "Generate";
+            btnGenerate.UseVisualStyleBackColor = true;
+            btnGenerate.Click += btnGenerate_Click;
+            // 
+            // panelCalc
+            // 
+            panelCalc.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelCalc.BackColor = Color.Cornsilk;
+            panelCalc.Location = new Point(33, 101);
+            panelCalc.Name = "panelCalc";
+            panelCalc.Size = new Size(734, 312);
+            panelCalc.TabIndex = 5;
+            // 
+            // btnRemover
+            // 
+            btnRemover.Location = new Point(629, 26);
+            btnRemover.Name = "btnRemover";
+            btnRemover.Size = new Size(116, 32);
+            btnRemover.TabIndex = 6;
+            btnRemover.Text = "Remover";
+            btnRemover.UseVisualStyleBackColor = true;
+            btnRemover.Click += btnRemover_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnRemover);
+            Controls.Add(panelCalc);
+            Controls.Add(btnGenerate);
             Controls.Add(lblEstado);
             Controls.Add(label1);
             Controls.Add(button1);
@@ -85,5 +120,8 @@
         private Button button1;
         private Label label1;
         private Label lblEstado;
+        private Button btnGenerate;
+        private Panel panelCalc;
+        private Button btnRemover;
     }
 }

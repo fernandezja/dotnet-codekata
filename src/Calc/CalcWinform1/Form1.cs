@@ -6,6 +6,8 @@ namespace CalcWinform1
     {
         private ICalc _calc;
 
+        private List<Button> _lista;
+
         public Form1(ICalc calc)
         {
             _calc = calc;
@@ -46,6 +48,37 @@ namespace CalcWinform1
         private void button1_MouseMove(object sender, MouseEventArgs e)
         {
             lblEstado.Text = $"MouseMove! {DateTime.Now.ToLongTimeString()}";
+        }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            var lista = new List<Button>();
+
+            for (int i = 0; i < 10; i++)
+            {
+                var b = new Button();
+                b.Text = i.ToString();
+
+                b.Location = new Point((i * 40), (i * 40));
+
+
+                panelCalc.Controls.Add(b);
+                lista.Add(b);
+            }
+
+            var bAdd = new Button();
+            bAdd.Text = "+";
+
+            bAdd.Location = new Point(100, 200);
+            panelCalc.Controls.Add(bAdd);
+
+            lista.Add(bAdd);
+
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
