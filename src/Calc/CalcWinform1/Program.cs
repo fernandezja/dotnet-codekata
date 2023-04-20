@@ -20,8 +20,8 @@ namespace CalcWinform1
 
             //serviceCollection.AddScoped<ICalc, CalcCore.CalcNormal>()
             serviceCollection
-                             //.AddScoped<ICalc, CalcSuperpower.CalcSuperpower>()
-                             .AddScoped<ICalc, CalcCore.CalcNormal>()                             
+                             .AddScoped<ICalc, CalcSuperpower.CalcSuperpower>()
+                             //.AddScoped<ICalc, CalcCore.CalcNormal>()                             
                              .AddScoped<Form1>();
 
             using (var serviceProvider = serviceCollection.BuildServiceProvider())

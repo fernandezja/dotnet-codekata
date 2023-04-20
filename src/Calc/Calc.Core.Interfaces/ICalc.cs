@@ -8,6 +8,9 @@ namespace Calc.Core.Interfaces
 {
     public interface ICalc
     {
+        EventHandler Procesando { get; set; }
+        EventHandler Termino { get; set; }
+
         int Add (int x, int y);
     }
 }
