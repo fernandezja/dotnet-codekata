@@ -102,10 +102,23 @@ namespace TestProject1
 
 
             //1 Inferencia de Tipo
+            var infTipo1 = "10";
+
+
             //var a = new Alumno();
             //2 metodo de extension o extensores
             //a.MiNuevoMetodo
             //3 Objeto anonimo
+            var jedi = new {
+                Nombre = "Yoda"
+            };
+
+            var jedi2 = new
+            {
+                Nombre2 = "Yoda"
+            };
+
+
             //4 Lambda  
 
 
