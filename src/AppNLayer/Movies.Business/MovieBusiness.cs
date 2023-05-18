@@ -16,5 +16,9 @@ namespace Movies.Business
         {
             return _movieRepository.GetAll();
         }
+        public List<Movie> Search(string stringToSearch)
+        {
+            return _movieRepository.Search(stringToSearch);
+        }
     }
 }
