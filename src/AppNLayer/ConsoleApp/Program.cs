@@ -20,7 +20,7 @@ Console.WriteLine("Movies Search");
 var textToSearch = "11";
 var movies2 = movieBusiness.Search(textToSearch);
 
-Console.WriteLine($" >> {movies.Count} movies with textToSearch: {textToSearch}");
+Console.WriteLine($" >> {movies2.Count} movies with textToSearch: \"{textToSearch}\"");
 
 foreach (var m in movies2)
 {

@@ -1,4 +1,5 @@
 ﻿using Movies.Entities;
+using System.Xml.Linq;
 
 namespace Movies.Data
 {
@@ -14,6 +15,10 @@ namespace Movies.Data
         public List<Movie> Search(string stringToSearch)
         {
             List<Movie> movies = EmulateFromDbDB();
+
+            //Example SQL
+            //SELECT MovieId, [Name] FROM dbo.Movie
+            //WHERE [Name] LIKE '%jedi%'
 
             var query = from m in movies
                         where m.Name.Contains(stringToSearch)
