@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.33711.374
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessRepoDb", "DataAccessRepoDb\DataAccessRepoDb.csproj", "{601DF2DC-1ACD-4098-8FD3-6218E617451A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessRepoDb.Entities", "DataAccessRepoDb.Entities\DataAccessRepoDb.Entities.csproj", "{C659F0F4-013E-46E0-81BE-2737BBA56ED2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{601DF2DC-1ACD-4098-8FD3-6218E617451A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{601DF2DC-1ACD-4098-8FD3-6218E617451A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{601DF2DC-1ACD-4098-8FD3-6218E617451A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{601DF2DC-1ACD-4098-8FD3-6218E617451A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C659F0F4-013E-46E0-81BE-2737BBA56ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C659F0F4-013E-46E0-81BE-2737BBA56ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C659F0F4-013E-46E0-81BE-2737BBA56ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C659F0F4-013E-46E0-81BE-2737BBA56ED2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4268C8EE-19F6-4DFC-9B40-C6068256A0F4}
+	EndGlobalSection
+EndGlobal
