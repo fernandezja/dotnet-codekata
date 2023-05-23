@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RepoDb.SqlServer" Version="1.13.1"  />
+    <PackageReference Include="RepoDb.SqlServer" Version="1.13.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataAccessRepoDb.Entities\DataAccessRepoDb.Entities.csproj" />
+    <ProjectReference Include="..\DataAccess.Entities\DataAccess.Entities.csproj" />
   </ItemGroup>
 
 </Project>

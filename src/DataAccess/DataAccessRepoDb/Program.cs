@@ -1,4 +1,4 @@
-﻿using DataAccessRepoDb.Entities;
+﻿using DataAccess.Entities;
 using Microsoft.Data.SqlClient;
 using RepoDb;
 using System;

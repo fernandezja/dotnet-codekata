@@ -1,5 +1,9 @@
-﻿namespace DataAccessRepoDb.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace DataAccess.Entities
 {
+
+    [Table("Movie")]
     public class Movie
     {
         public int MovieId { get; set; }
