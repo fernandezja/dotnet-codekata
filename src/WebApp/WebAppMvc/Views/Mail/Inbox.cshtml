@@ -1,0 +1,13 @@
+﻿@model List<App.Core.Entities.Mail>
+@{
+}
+
+<h2>Inbox</h2>
+
+<ul>
+@foreach(var m in Model){
+    <li>
+            <strong>[@m.MailId]</strong> @m.Asunto
+    </li>
+}     
+</ul>

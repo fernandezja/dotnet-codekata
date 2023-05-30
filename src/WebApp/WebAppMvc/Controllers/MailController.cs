@@ -7,7 +7,6 @@ namespace WebAppMvc.Controllers
     public class MailController: Controller 
     {
 
-
         public IActionResult Index()
         {
             return View();
@@ -34,10 +33,10 @@ namespace WebAppMvc.Controllers
         }
 
 
-        public IActionResult BandejaDeEntrada()
+        public IActionResult Inbox()
         {
 
-            var mails = (new MailBusiness()).Search("demo");
+            var mails = (new MailBusiness()).Search("data_source");
 
             return View(mails);
         }
