@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.33711.374
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppMvc", "WebAppMvc\WebAppMvc.csproj", "{AB2046A5-1330-409C-9449-E0D3AFB3A5EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppMvc", "WebAppMvc\WebAppMvc.csproj", "{AB2046A5-1330-409C-9449-E0D3AFB3A5EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Core.Entities", "App.Core.Entities\App.Core.Entities.csproj", "{EFFE0001-F6E6-42FB-AC2D-F92CDD97A6C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Core.Entities", "App.Core.Entities\App.Core.Entities.csproj", "{EFFE0001-F6E6-42FB-AC2D-F92CDD97A6C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Core.Business", "App.Core.Business\App.Core.Business.csproj", "{F4CC86C8-62A4-4E2F-8A0A-8EF4FF177965}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Core.Business", "App.Core.Business\App.Core.Business.csproj", "{F4CC86C8-62A4-4E2F-8A0A-8EF4FF177965}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Core.Data", "App.Core.Data\App.Core.Data.csproj", "{EB045355-26F2-4685-8A9E-D2D36DC86F02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Core.Data", "App.Core.Data\App.Core.Data.csproj", "{EB045355-26F2-4685-8A9E-D2D36DC86F02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp", "WinFormsApp\WinFormsApp.csproj", "{8F42969F-8D79-4EF3-9351-445AD21FA35B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{EB045355-26F2-4685-8A9E-D2D36DC86F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB045355-26F2-4685-8A9E-D2D36DC86F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB045355-26F2-4685-8A9E-D2D36DC86F02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F42969F-8D79-4EF3-9351-445AD21FA35B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F42969F-8D79-4EF3-9351-445AD21FA35B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F42969F-8D79-4EF3-9351-445AD21FA35B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F42969F-8D79-4EF3-9351-445AD21FA35B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

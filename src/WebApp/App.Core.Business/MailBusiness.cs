@@ -12,13 +12,16 @@ namespace App.Core.Business
             _mailRepository = new MailRepository(); //TODO: DI Inyectar 
         }
 
-        public List<Mail> Search(string textToSearch) {
+        public List<Mail> Search(string textToSearch, 
+                                int pageSize,
+                                int pageIndex) {
 
-            //TODO: Validar textToSearch
+            //TODO: Validar textToSearch, pageIndex
             //TODO: Paginar
 
-
-            return _mailRepository.Search(textToSearch); ;
+            return _mailRepository.Search(textToSearch, 
+                                          pageSize, 
+                                          pageIndex); 
         }
     }
 }

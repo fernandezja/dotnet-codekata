@@ -16,7 +16,7 @@ namespace App.Core.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string connectionString =
-                "Persist Security Info=True;Initial Catalog=Movies;Data Source=.; Integrated Security=True;TrustServerCertificate=True;";
+                "Persist Security Info=True;Initial Catalog=EmailManager;Data Source=.; Integrated Security=True;TrustServerCertificate=True;";
 
             optionsBuilder.UseSqlServer(connectionString);
         }
