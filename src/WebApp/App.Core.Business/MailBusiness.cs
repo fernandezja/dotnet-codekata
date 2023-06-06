@@ -7,21 +7,20 @@ namespace App.Core.Business
     {
         public MailRepository _mailRepository { get; set; }
 
+
         public MailBusiness()
         {
             _mailRepository = new MailRepository(); //TODO: DI Inyectar 
         }
 
-        public List<Mail> Search(string textToSearch, 
-                                int pageSize,
-                                int pageIndex) {
+        public BusquedaGenerica<Mail> Search(BusquedaGenerica<Mail> mailBusqueda)
+        {
 
             //TODO: Validar textToSearch, pageIndex
             //TODO: Paginar
 
-            return _mailRepository.Search(textToSearch, 
-                                          pageSize, 
-                                          pageIndex); 
+            return _mailRepository.Search(mailBusqueda);
         }
+
     }
 }

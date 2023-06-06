@@ -5,38 +5,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace App.Core.Data
 {
     public class MailRepository
     {
+
         public MailRepository()
         {
-                
+
         }
 
-        public List<Mail> Search(string textToSearch,
-                                int pageSize,
-                                int pageIndex)
+        public BusquedaGenerica<Mail> Search(BusquedaGenerica<Mail> mailBusqueda)
+
         {
 
-            //pageIndex = 1 (pageSize = 5) > ... fila/row 1
-            //pageIndex = 2 (pageSize = 5) > ... fila/row 6
-            //pageIndex = 3 (pageSize = 5) > ... fila/row 11
-            //pageIndex = 4 (pageSize = 5) > ... fila/row 16
-
-            var skipRows = ((pageIndex - 1) * pageSize);
+            var skipRows = ((mailBusqueda.PageIndex - 1) * mailBusqueda.PageSize);
 
             using (var context = new MailsContext())
             {
                 var query = from m in context.Mails
-                            where m.Asunto.Contains(textToSearch)
+                            where m.Asunto.Contains(mailBusqueda.TextToSearch)
                             select m;
 
-                //pageTotal = 3;
+                var contar = query.Count();
 
-                return query.Skip(skipRows)
-                            .Take(pageSize)
-                            .ToList();
+
+                mailBusqueda.Items = query.Skip(skipRows)
+                                           .Take(mailBusqueda.PageSize)
+                                           .ToList();
+
+                mailBusqueda.Total = contar;
+
+
+                return mailBusqueda;
             }
 
         }

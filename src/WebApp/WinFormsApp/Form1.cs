@@ -1,4 +1,5 @@
 using App.Core.Business;
+using App.Core.Entities;
 
 namespace WinFormsApp
 {
@@ -32,12 +33,18 @@ namespace WinFormsApp
             txtPageIndex.Text = pageIndex.ToString();
             _txtPageIndexBlock = false;
 
-            var mails = _mailBusiness.Search(textToSearch: txtSearch.Text,
-                                             pageSize: pageSize,
-                                             pageIndex: pageIndex);
+            var mailBusqueda = new BusquedaGenerica<Mail>()
+            {
+                TextToSearch = txtSearch.Text,
+                PageIndex = pageIndex,
+                PageSize = pageSize,
+            };
 
-            dataGridView1.DataSource = mails;
+            _ = _mailBusiness.Search(mailBusqueda);
 
+            dataGridView1.DataSource = mailBusqueda.Items;
+
+            
         }
 
         private void cbTamanioPagina_SelectedIndexChanged(object sender, EventArgs e)
