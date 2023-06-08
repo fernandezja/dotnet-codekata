@@ -7,24 +7,25 @@ namespace App.Core.Business
     {
         public MailRepository _mailRepository { get; set; }
 
+
         public MailBusiness()
         {
             _mailRepository = new MailRepository(); //TODO: DI Inyectar 
         }
 
-        public List<Mail> Search(MailFilter filter) {
 
+        public BusquedaGenerica<Mail> Search(BusquedaGenerica<Mail> mailBusqueda)
+        {
             //TODO: Validar textToSearch, pageIndex
-            if (filter is null)
+            if (mailBusqueda is null)
             {
                 throw new ArgumentException("Filter invalid");
             }
 
             //TODO: Paginar
 
-            return _mailRepository.Search(filter.TextToSearch, 
-                                          filter.PageSize,
-                                          filter.PageIndex); 
+            return _mailRepository.Search(mailBusqueda);
         }
+
     }
 }

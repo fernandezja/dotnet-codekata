@@ -33,18 +33,20 @@ namespace WinFormsApp
             txtPageIndex.Text = pageIndex.ToString();
             _txtPageIndexBlock = false;
 
-            var filter = new MailFilter()
+
+            var mailBusqueda = new BusquedaGenerica<Mail>()
             {
                 TextToSearch = txtSearch.Text,
                 PageIndex = pageIndex,
-                PageSize = pageSize
+                PageSize = pageSize,
             };
 
-            var mails = _mailBusiness.Search(filter);
+            var mails = _mailBusiness.Search(mailBusqueda);
 
-            dataGridView1.DataSource = mails;
 
+            dataGridView1.DataSource = mailBusqueda.Items;            
         }
+        
 
         private void cbTamanioPagina_SelectedIndexChanged(object sender, EventArgs e)
         {
