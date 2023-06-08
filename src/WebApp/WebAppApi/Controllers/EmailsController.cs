@@ -102,12 +102,12 @@ namespace WebAppApi.Controllers
 
             ///Request.Form[]
 
-            var mails = _mailBusiness.Search(mailBusqueda);
+            var respuesta = _mailBusiness.Search(mailBusqueda);
 
             //Response.StatusCode = 200;
             //Response.Body
 
-            return Ok(mails);
+            return Ok(respuesta);
         }
 
 
@@ -125,9 +125,9 @@ namespace WebAppApi.Controllers
 
             ///Request.Form[]
 
-            var mails = _mailBusiness.Search(mailBusqueda);
+            var respuesta = _mailBusiness.Search(mailBusqueda);
 
-            return Ok(mails);
+            return Ok(respuesta);
         }
     }
 }

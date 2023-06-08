@@ -1,23 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace App.Core.Entities
 {
+    /// <summary>
+    /// Generic Filter
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class BusquedaGenerica<T>
     {
-        public int Total { get; set; }
-        public List<T> Items { get; set; }
+       
         public string TextToSearch { get; set; }
-        public int PageSize { get; set; }
-        public int PageIndex { get; set; }
-        public string MensajeResultado
-        {
-            get { return "texto a responder"; }
-        }
 
+        [DefaultValue(10)]
+        public int PageSize { get; set; }
+
+        [DefaultValue(1)]
+        public int PageIndex { get; set; }
+       
         public bool IsValid
         {
             get
@@ -36,6 +40,12 @@ namespace App.Core.Entities
                 return true;
 
             }
+        }
+
+        public BusquedaGenerica()
+        {
+            PageIndex = 1;
+            PageSize = 10;
         }
     }
 }

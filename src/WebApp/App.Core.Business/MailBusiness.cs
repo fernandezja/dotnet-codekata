@@ -14,7 +14,7 @@ namespace App.Core.Business
         }
 
 
-        public BusquedaGenerica<Mail> Search(BusquedaGenerica<Mail> mailBusqueda)
+        public RespuestaGenerica<Mail> Search(BusquedaGenerica<Mail> mailBusqueda)
         {
             //TODO: Validar textToSearch, pageIndex
             if (mailBusqueda is null)

@@ -41,10 +41,10 @@ namespace WinFormsApp
                 PageSize = pageSize,
             };
 
-            var mails = _mailBusiness.Search(mailBusqueda);
+            var respuesta = _mailBusiness.Search(mailBusqueda);
 
 
-            dataGridView1.DataSource = mailBusqueda.Items;            
+            dataGridView1.DataSource = respuesta.Items;            
         }
         
 
