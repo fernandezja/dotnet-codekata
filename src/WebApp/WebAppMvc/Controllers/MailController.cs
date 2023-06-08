@@ -36,7 +36,12 @@ namespace WebAppMvc.Controllers
         public IActionResult Inbox()
         {
 
-            var mails = (new MailBusiness()).Search("data_source");
+            var filter = new MailFilter()
+            {
+                TextToSearch = "data_source"
+            };
+
+            var mails = (new MailBusiness()).Search(filter);
 
             return View(mails);
         }

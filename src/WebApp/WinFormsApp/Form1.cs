@@ -1,4 +1,5 @@
 using App.Core.Business;
+using App.Core.Entities;
 
 namespace WinFormsApp
 {
@@ -32,9 +33,14 @@ namespace WinFormsApp
             txtPageIndex.Text = pageIndex.ToString();
             _txtPageIndexBlock = false;
 
-            var mails = _mailBusiness.Search(textToSearch: txtSearch.Text,
-                                             pageSize: pageSize,
-                                             pageIndex: pageIndex);
+            var filter = new MailFilter()
+            {
+                TextToSearch = txtSearch.Text,
+                PageIndex = pageIndex,
+                PageSize = pageSize
+            };
+
+            var mails = _mailBusiness.Search(filter);
 
             dataGridView1.DataSource = mails;
 

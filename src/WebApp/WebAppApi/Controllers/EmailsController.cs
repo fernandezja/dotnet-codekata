@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using App.Core.Business;
+using App.Core.Entities;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAppApi.Controllers
@@ -8,15 +11,16 @@ namespace WebAppApi.Controllers
     [ApiController]
     public class EmailsController : ControllerBase
     {
+        private MailBusiness _mailBusiness;
 
         public EmailsController()
         {
-
+            _mailBusiness = new MailBusiness();
         }
 
         [EnableCors]
         [HttpGet]
-        public IEnumerable<App.Core.Entities.Mail> Get() { 
+        public IActionResult Get() { 
             
             var emails = new List<App.Core.Entities.Mail>();
             
@@ -25,7 +29,8 @@ namespace WebAppApi.Controllers
                 Asunto = "Demo"
             });
 
-            return emails;
+
+            return Ok(emails);
         }
 
 
@@ -81,6 +86,45 @@ namespace WebAppApi.Controllers
             var demoAsunto = mail.Asunto;
 
             return new OkResult();
+        }
+
+
+        [EnableCors]
+        [HttpPost("search")]
+        public IActionResult Search([FromBody]MailFilter filter)
+        {
+            
+            if (filter is null 
+                || !filter.IsValid) {
+                return BadRequest();            
+            }
+
+
+            ///Request.Form[]
+
+            var mails = _mailBusiness.Search(filter);
+
+            return Ok(mails);
+        }
+
+
+        [EnableCors]
+        [HttpGet("search2")]
+        public IActionResult Search2([FromQuery] MailFilter filter)
+        {
+
+            if (filter is null
+                || !filter.IsValid)
+            {
+                return BadRequest();
+            }
+
+
+            ///Request.Form[]
+
+            var mails = _mailBusiness.Search(filter);
+
+            return Ok(mails);
         }
     }
 }
