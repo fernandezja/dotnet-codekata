@@ -13,9 +13,9 @@ namespace WebAppApi.Controllers
     {
         private MailBusiness _mailBusiness;
 
-        public EmailsController()
+        public EmailsController(MailBusiness mailBusiness)
         {
-            _mailBusiness = new MailBusiness();
+            _mailBusiness = mailBusiness;
         }
 
         [EnableCors]
