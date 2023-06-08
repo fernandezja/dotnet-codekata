@@ -13,10 +13,15 @@ namespace App.Core.Business
             _mailRepository = new MailRepository(); //TODO: DI Inyectar 
         }
 
+
         public BusquedaGenerica<Mail> Search(BusquedaGenerica<Mail> mailBusqueda)
         {
-
             //TODO: Validar textToSearch, pageIndex
+            if (mailBusqueda is null)
+            {
+                throw new ArgumentException("Filter invalid");
+            }
+
             //TODO: Paginar
 
             return _mailRepository.Search(mailBusqueda);

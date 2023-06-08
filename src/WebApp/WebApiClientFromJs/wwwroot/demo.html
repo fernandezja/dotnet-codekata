@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Demo fetch emails</h1>
+
+    <ul id="emailsList"></ul>
+
+
+    <script>
+        const emailsList = document.getElementById('emailsList');
+
+        fetch("http://localhost:7044/api/emails")
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(m => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = m.asunto;
+                    emailsList.appendChild(listItem);
+                })
+            })
+            .catch(error => {
+                console.log('Error:', error);
+            });
+    </script>
+
+</body>
+</html>
