@@ -91,18 +91,18 @@ namespace WebAppApi.Controllers
 
         [EnableCors]
         [HttpPost("search")]
-        public IActionResult Search([FromBody]MailFilter filter)
+        public IActionResult Search([FromBody] BusquedaGenerica<Mail> mailBusqueda)
         {
             
-            if (filter is null 
-                || !filter.IsValid) {
+            if (mailBusqueda is null 
+                || !mailBusqueda.IsValid) {
                 return BadRequest();            
             }
 
 
             ///Request.Form[]
 
-            var mails = _mailBusiness.Search(filter);
+            var mails = _mailBusiness.Search(mailBusqueda);
 
             //Response.StatusCode = 200;
             //Response.Body
@@ -113,11 +113,11 @@ namespace WebAppApi.Controllers
 
         [EnableCors]
         [HttpGet("search2")]
-        public IActionResult Search2([FromQuery] MailFilter filter)
+        public IActionResult Search2([FromQuery] BusquedaGenerica<Mail> mailBusqueda)
         {
 
-            if (filter is null
-                || !filter.IsValid)
+            if (mailBusqueda is null
+                || !mailBusqueda.IsValid)
             {
                 return BadRequest();
             }
@@ -125,7 +125,7 @@ namespace WebAppApi.Controllers
 
             ///Request.Form[]
 
-            var mails = _mailBusiness.Search(filter);
+            var mails = _mailBusiness.Search(mailBusqueda);
 
             return Ok(mails);
         }

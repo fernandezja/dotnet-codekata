@@ -36,7 +36,7 @@ namespace WebAppMvc.Controllers
         public IActionResult Inbox()
         {
 
-            var filter = new MailFilter()
+            var filter = new BusquedaGenerica<Mail>()
             {
                 TextToSearch = "data_source"
             };

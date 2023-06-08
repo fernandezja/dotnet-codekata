@@ -17,5 +17,25 @@ namespace App.Core.Entities
         {
             get { return "texto a responder"; }
         }
+
+        public bool IsValid
+        {
+            get
+            {
+
+                if (PageSize <= 0)
+                {
+                    return false;
+                }
+
+                if (PageIndex <= 0)
+                {
+                    return false;
+                }
+
+                return true;
+
+            }
+        }
     }
 }
