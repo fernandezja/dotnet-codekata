@@ -104,6 +104,9 @@ namespace WebAppApi.Controllers
 
             var mails = _mailBusiness.Search(filter);
 
+            //Response.StatusCode = 200;
+            //Response.Body
+
             return Ok(mails);
         }
 
