@@ -1,4 +1,5 @@
 using App.Core.Business;
+using App.Core.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddTransient<ContactRepository>();
+builder.Services.AddTransient<MailRepository>();
 builder.Services.AddTransient<MailBusiness>();
 
 var app = builder.Build();

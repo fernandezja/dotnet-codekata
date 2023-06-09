@@ -5,12 +5,15 @@ namespace App.Core.Business
 {
     public class MailBusiness
     {
-        public MailRepository _mailRepository { get; set; }
+        private MailRepository _mailRepository;
+        private ContactRepository _contactRepository;
 
 
-        public MailBusiness()
+        public MailBusiness(MailRepository mailRepository,
+                            ContactRepository contactRepository)
         {
-            _mailRepository = new MailRepository(); //TODO: DI Inyectar 
+            _mailRepository = mailRepository;
+            _contactRepository = contactRepository;
         }
 
 
