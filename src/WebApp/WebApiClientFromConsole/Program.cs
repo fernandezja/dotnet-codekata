@@ -1,4 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Text.Json;
+using WebApiClientFromConsole;
+
 Console.WriteLine("WebApiClientFromConsole!");
 
 //HttpClientFactory
@@ -9,13 +12,18 @@ Console.ReadKey();
 
 using (var client = new HttpClient()) {
 
-    var response = await client.GetAsync("https://localhost:7044/api/emails");
+    var response = await client.GetAsync("http://localhost:5044/api/emails");
 
 	if (response.IsSuccessStatusCode)
 	{
 		var content = await response.Content.ReadAsStringAsync();
         Console.WriteLine(content);
-	}
+
+        List<EmailOutTheBox> emails = JsonSerializer.Deserialize<List<EmailOutTheBox>>(content);
+
+        Console.WriteLine($"List count: {emails.Count}");
+
+    }
 	else
 	{
         Console.WriteLine($"ERROR: StatusCode: {response.StatusCode}" );

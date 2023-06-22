@@ -18,16 +18,23 @@ namespace WebAppApi.Controllers
             _mailBusiness = mailBusiness;
         }
 
+
         [EnableCors]
         [HttpGet]
+        [HttpGet("listado-completo")]
         public IActionResult Get() { 
             
             var emails = new List<App.Core.Entities.Mail>();
-            
-            emails.Add(new App.Core.Entities.Mail() {
-                MailId = 1,
-                Asunto = "Demo"
-            });
+
+            for (int i = 1; i <= 100; i++)
+            {
+                emails.Add(new App.Core.Entities.Mail()
+                {
+                    MailId = i,
+                    Asunto = $"Mail demo #{i}"
+                });
+            }
+           
 
 
             return Ok(emails);
